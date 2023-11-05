@@ -38,8 +38,8 @@ public class AddressView extends javax.swing.JFrame {
             e.printStackTrace();
         }
 
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+        ImageIcon imageIcon = new ImageIcon(AddressView.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
 
         this.setTitle(env.getTitle());
 
@@ -64,8 +64,6 @@ public class AddressView extends javax.swing.JFrame {
     public AddressView() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-    
 
     private void loadCities() {
 

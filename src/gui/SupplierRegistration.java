@@ -61,8 +61,10 @@ public class SupplierRegistration extends javax.swing.JFrame {
             logger.addHandler(handler);
         } catch (Exception e) {
         }
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+
+        ImageIcon imageIcon = new ImageIcon(SupplierRegistration.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
+
         this.setResizable(false);
         this.setTitle(env.getTitle());
 //        jTextField1.setEditable(false);

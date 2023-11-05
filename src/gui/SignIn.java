@@ -57,8 +57,8 @@ public class SignIn extends javax.swing.JFrame {
         ////Title Bar
         this.setTitle(env.getTitle());
         //
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+        ImageIcon imageIcon = new ImageIcon(SignIn.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
 
         jTextField1.grabFocus();
 

@@ -50,8 +50,9 @@ public class CustomerRegistration extends javax.swing.JFrame {
 
         }
 
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+        ImageIcon imageIcon = new ImageIcon(CustomerRegistration.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
+
         this.setTitle(env.getTitle());
 
         this.setResizable(false);

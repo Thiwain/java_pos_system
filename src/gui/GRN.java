@@ -54,8 +54,9 @@ public class GRN extends javax.swing.JFrame {
         this.setTitle(env.getTitle());
         env.setGrn(false);
 
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+        ImageIcon imageIcon = new ImageIcon(GRN.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
+
         this.setTitle(env.getTitle());
 
         generateGRNNumber();
@@ -545,6 +546,10 @@ public class GRN extends javax.swing.JFrame {
                 );
 
             }
+
+            JOptionPane.showMessageDialog(this, "Stock has updated.", "Info", JOptionPane.INFORMATION_MESSAGE);
+
+            this.dispose();
 
         } catch (Exception ex) {
 //            ex.printStackTrace();

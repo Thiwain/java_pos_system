@@ -58,8 +58,10 @@ public class Stock extends javax.swing.JFrame {
         }
         this.setResizable(false);
         this.setTitle(env.getTitle());
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+
+        ImageIcon imageIcon = new ImageIcon(Stock.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
+
         env.setStock(false);
 
         loadBrands();

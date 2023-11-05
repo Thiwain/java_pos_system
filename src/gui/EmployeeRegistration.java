@@ -46,8 +46,9 @@ public class EmployeeRegistration extends javax.swing.JFrame {
         } catch (Exception e) {
         }
 
-        Image icon = new ImageIcon(this.getClass().getResource(env.getIcoPath())).getImage();
-        this.setIconImage(icon);
+        ImageIcon imageIcon = new ImageIcon(EmployeeRegistration.class.getResource(env.getIcoPath()));
+        this.setIconImage(imageIcon.getImage());
+
         this.setTitle(env.getTitle());
 
         this.setResizable(false);
